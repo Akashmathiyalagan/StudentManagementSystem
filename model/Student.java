@@ -23,7 +23,7 @@ public class Student {
     public int getId() {
     	return StudentId;
     }
-    public String Department() {
+    public String getDepartment() {
     	return Department;
     }
     public long getPhoneNumber() {
