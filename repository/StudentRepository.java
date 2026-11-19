@@ -1,5 +1,5 @@
 package com.sms.repository;
-
+import com.sms.model.*;
 import java.util.ArrayList;
 import java.util.List;
 import com.sms.model.*;
