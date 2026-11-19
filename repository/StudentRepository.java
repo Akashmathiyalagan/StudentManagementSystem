@@ -10,17 +10,18 @@ public class StudentRepository {
 	public boolean add(Student student) {
 		String sql="INSERT INTO student VALUES(?,?,?,?,?)";
 		try(Connection con=DBConnection.getConnection();
-				PreparedStatement ps=con.prepareStatement(sql)) {
+			PreparedStatement ps=con.prepareStatement(sql)) {
 			ps.setInt(1, student.getId());
 			ps.setString(2, student.getName());
 			ps.setString(3, student.getDepartment());
 			ps.setString(4, student.getEmail());
 			ps.setLong(5, student.getPhoneNumber());
+			ps.executeUpdate();
 		}
 		catch(SQLException e){
 			e.printStackTrace();
-		}
-		
+		}	
+		return false;
 	}
 }
 //	private List<Student> students=new ArrayList<>();
