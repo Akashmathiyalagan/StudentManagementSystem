@@ -77,10 +77,10 @@ public void SearchStudent() {
 	
 	Student student=Service.findById(id);
 	if(student !=null) {
-		System.out.println("Not Available");
+		System.out.println(student);
 	}
 	else {
-		System.out.println(student);
+		System.out.println("Not Available");
 	}
 }
 }
